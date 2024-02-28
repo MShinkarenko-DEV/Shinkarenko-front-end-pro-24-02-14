@@ -1,9 +1,8 @@
 const errorMessage = `Year of birth should be valid number between 1900 and 2024`;
-alert(`Hi body. 
+alert(`Dear user! 
 Can you please answer several question?
-It is important to register in the system`);
+Never forget that Homeland is watching you!`);
 const year = +prompt("What is your year of birth?");
-console.log(year);
 if ((isNaN(year) || year < 1900 || year > 2024) && year !== 0) {
     alert(errorMessage);   
     throw new Error(errorMessage);     
@@ -14,50 +13,32 @@ const age = currentYear - year;
 const city = prompt("What city are you live in?");
 const sport = prompt("What kind of sport are you fond of?");
 let country = '';
-
-if (city === 'Ankara') {
-    country = 'Turkey';
-} else if (city === 'Kiev') {
-    country = 'Ukraine';
-} else if (city === 'Minsk') {
-    country = 'Belorussia';
-} else if (city === 'Warszawa') {
-    country = 'Poland';
-} else if (city === 'Sofia') {
-    country = 'Bulgaria';
-} else if (city === 'London') {
-    country = 'United Kingdom';
-} else if (city === 'Prague') {
-    country = 'Czech Republic';
-} else if (city === 'Paris') {
-    country = 'France';
-} else if (city === 'Rome') {
-    country = 'Italy';
+if (city !== null) {
+    if (city.toUpperCase() === 'London'.toUpperCase()) {
+        country = 'United Kingdom';
+    } else if (city.toUpperCase() === 'Kiev'.toUpperCase()) {
+        country = 'Ukraine';
+    } else if (city.toUpperCase() === 'Washington'.toUpperCase()) {
+        country = 'USA';
+    }
 }
+
 
 let famous = '';
 
-if (sport === 'football') {
-    famous = 'Ronaldo';
-} else if (sport === 'hokkey') {
-    famous = 'Ovechkin';
-} else if (sport === 'athletics') {
-    famous = 'Bolt Usain';
-} else if (sport === 'MMA') {
-    famous = 'Konnor Mak Gregor';
-} else if (sport === 'wrestling') {
-    famous = 'Karelin';
-} else if (sport === 'boxing') {
-    famous = 'Mukhamed Ali';
-} else if (sport === 'basketball') {
-    famous = 'Michael Jordan';
-} else if (sport === 'swimming') {
-    famous = 'Yana Klochkova';
+if (sport !== null) {
+    if (sport.toUpperCase() === 'football'.toUpperCase()) {
+        famous = 'Ronaldo';
+    } else if (sport.toUpperCase === 'athletics'.toUpperCase()) {
+        famous = 'Bolt Usain';
+    }  else if (sport.toUpperCase === 'boxing'.toUpperCase()) {
+        famous = 'Mukhamed Ali';
+    }
 }
 
-const ageStr = age !== 2024 ? `Your age is ${age}` : 'It is pity that you have not inputted year of birth';
-const cityStr = city ? `You are living in  ${country ? "capital of the country " + country : "city " + city}` : 'It is pity that you have not inputted the city';
-const sportStr = city ? `${famous ? "Cool! Want to be as " + famous : ""}` : 'It is pity that you have not inputted the sport';
+const ageStr = year !== 0 ? `Your age is ${age}` : 'It is pity that you have not inputted year of your birth';
+const cityStr = city ? `You are living in ${country ? "capital of the country" + country : "city" + city}` : 'It is pity that you have not inputted  the city you are livin in';
+const sportStr = sport ? `${famous ? "Cool! You are going to be just like " + famous : ""}` : 'It is pity that you have not inputted  the sport you are fond of';
 
 alert(`${ageStr}
 ${cityStr}
