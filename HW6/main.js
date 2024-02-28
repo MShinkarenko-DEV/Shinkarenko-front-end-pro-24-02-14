@@ -29,9 +29,9 @@ let famous = '';
 if (sport !== null) {
     if (sport.toUpperCase() === 'football'.toUpperCase()) {
         famous = 'Ronaldo';
-    } else if (sport.toUpperCase === 'athletics'.toUpperCase()) {
+    } else if (sport.toUpperCase() === 'athletics'.toUpperCase()) {
         famous = 'Bolt Usain';
-    }  else if (sport.toUpperCase === 'boxing'.toUpperCase()) {
+    }  else if (sport.toUpperCase() === 'boxing'.toUpperCase()) {
         famous = 'Mukhamed Ali';
     }
 }
