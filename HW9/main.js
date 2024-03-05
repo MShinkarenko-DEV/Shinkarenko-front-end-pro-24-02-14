@@ -57,3 +57,36 @@ for(i = 100; i <=200; i++) {
 }
 
 console.log(`numbers from 100 to 200 you can divide by 3 -  ${str3.join(', ')}`);
+
+let num = +prompt("Please enter number");
+let numArr = [];
+let numEvenArr = [];
+let sumEvenDivide = 0;
+if (!isNaN(num) && num > 1) {
+    for(i = 2; i <=num; i++) {
+        if (num % i === 0) {
+            if (i % 2 === 0) {
+                numEvenArr.push(i);
+                sumEvenDivide += i;
+            }
+            numArr.push(i);
+        }        
+    }
+    console.log(`numbers with help of ${num}  can divided -  ${numArr.join(', ')}`);
+    console.log(`even numbers with help of ${num}  can divided -  ${numEvenArr.join(', ')}`);
+    console.log(`sum of even numbers with help of ${num}  can divided -  ${sumEvenDivide}`);
+} else {
+    console.log('Incorect data!');
+}
+
+let pifagorFull = [];
+for (i = 1; i <= 10; i++) {
+    for (j = 1; j <= 10; j++) {
+        if (i === 1) {
+            pifagorFull.push([]);     
+        }
+        pifagorFull[i - 1].push(j*i);
+    }    
+}
+
+console.table(pifagorFull);
